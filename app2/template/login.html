@@ -1,0 +1,111 @@
+{% load crispy_forms_tags %}
+<html>
+<head>
+   <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-OXTEbYDqaX2ZY/BOaZV/yFGChYHtrXH2nyXJ372n2Y8abBhrqacCEe+3qhSHtLjy" crossorigin="anonymous">
+</head>
+<style>
+
+#id_username {
+    width: 500px;
+
+    font-size:17;
+        border-radius:7px;
+        border-color:white;
+        margin-bottom: 13px;
+
+}
+
+#id_password {
+    width: 500px;
+
+    font-size:17;
+        border-radius:7px;
+        border-color:white;
+
+}
+button {
+
+margin-top: 28;
+margin-bottom: 5;
+font-size: 19;
+border-color: white;
+color: #1A7F8B;
+border-radius: 13px;
+
+}
+
+form {
+    margin-left: 630;
+      margin-top: -359;
+}
+
+#a1 {
+    font-weight: bold;
+
+}
+
+
+img {
+margin-top: 28;
+margin-left: -70;
+}
+
+p {
+margin-left: 751;
+color: white;
+margin-left: 631;
+    margin-top: -15;
+}
+
+a {
+color: white;
+}
+
+	body {
+	    background-color: #1A7F8B;
+	}
+
+	#forma {
+	color:white;
+
+	}
+
+h1 {
+  margin-top: 65;
+    color: white;
+    font-size: 2.5rem;
+    margin-left: 630;
+    margin-bottom: -38;
+
+}
+</style>
+<body>
+<div class="container py-5">
+    <h1>Log in</h1>
+    <img id="img1" src="https://miro.medium.com/max/600/1*LYqpSMvgJhQrKFUX2-hwzA.jpeg">
+    <form id="forma" method="POST">
+     {% csrf_token %}
+     {{ login_form|crispy }}
+    <button type="submit" ><a id="a1" href="/home"></a> <b>Log in </b></button>
+    </form>
+    <p>Don't have an account? <a href="/register">Create an account</a></p>
+</div>
+<script>
+
+    $( document ).ready(function() {
+    $("id_password").attr('class', "form-control");
+});
+</script>
+
+</body>
+
+</html>

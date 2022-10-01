@@ -1,0 +1,37 @@
+
+<html>
+<head>
+
+</head>
+
+<style>
+#div1{
+background-color: #1A7F8B;
+    color: white;
+    font-size: 40;
+        margin-bottom: 40;
+      text-align: center;
+}
+
+    #div2 {
+
+    font-size: 20;
+    color: #1A7F8B;
+    margin-left: 50;
+    margin-right: 50;
+
+    }
+
+    img {
+    height: 300;
+    margin-left: 35%;
+    margin-top: 10px;
+    }
+</style>
+<body>
+<div id="div1">{{obj.lesson_name}}</div>
+
+<div id="div2"> <b>{{obj.content}}</b></div>
+<img src="{{MEDIA_URL}}{{obj.image.url}}" class="card-img-top" alt="...">
+</body>
+</html>
